@@ -55,8 +55,8 @@ pipeline {
         bat """
           minikube status || minikube start
           minikube image load %IMAGE_NAME%:%IMAGE_TAG%
-          kubectl apply -f indiaproj/deployment.yaml
-          kubectl apply -f indiaproj/services.yaml
+          kubectl apply -f deployment.yaml
+          kubectl apply -f services.yaml
           kubectl get pods
           kubectl get svc
         """
