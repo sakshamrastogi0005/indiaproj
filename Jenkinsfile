@@ -59,6 +59,8 @@ pipeline {
           kubectl apply -f services.yaml
           kubectl get pods
           kubectl get svc
+          minikube addons enable dashboard 
+          minikube dashboard
         """
       }
     }
